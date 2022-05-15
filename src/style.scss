@@ -1,3 +1,7 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
 .ui-board {
     width: 600px;
     height: 600px;
