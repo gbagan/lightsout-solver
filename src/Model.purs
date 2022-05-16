@@ -1,17 +1,16 @@
-module Lightsout.Model
-  where
-  
+module Lightsout.Model where
+
 import Prelude
 import Data.Array (replicate, modifyAtIndices)
 import Data.Maybe (Maybe(..))
 import Lightsout.Solver (solve)
 
-type Model =
-  { nrows :: Int
-  , ncols :: Int
-  , grid :: Array Boolean
-  , solution :: Maybe (Array Boolean)
-  }
+type Model
+  = { nrows :: Int
+    , ncols :: Int
+    , grid :: Array Boolean
+    , solution :: Maybe (Array Boolean)
+    }
 
 init :: Model
 init =
@@ -21,7 +20,9 @@ init =
   , solution: Nothing
   }
 
-data Msg = Solve | Flip Int
+data Msg
+  = Solve
+  | Flip Int
 
 update :: Msg -> Model -> Model
 update Solve model = model { solution = solve model.ncols model.nrows model.grid }

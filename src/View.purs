@@ -18,11 +18,11 @@ square light cross props =
   [ H.div [H.class_ "lightsout-square-inner", H.class' "white" light]
     [ H.div [H.class_ "lightsout-square-white"] $ 
         if cross then [
-          H.text "1"
+          H.svg [H.class_ "ui-absolute noirblanc-cross"] [H.use [P.href "#cross"]]
         ] else []
     ,   H.div [H.class_ "lightsout-square-black"] $
         if cross then [
-          H.text "1"
+          H.svg [H.class_ "ui-absolute noirblanc-cross"] [H.use [P.href "#cross"]]
         ] else []
     ]
   ]

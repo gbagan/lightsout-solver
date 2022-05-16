@@ -42,8 +42,13 @@
 .lightsout-square-white {
     background-color: #dfdfdf;
     transform: rotateY(180deg);
-  }
+}
 
+.ui-absolute {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 
 .lightsout-cross {
     opacity: 0.7;
